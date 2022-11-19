@@ -17,16 +17,16 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 password = ""
 
-for number in range(0, nr_letters):
-    n = random.randint(0, len(letters)-1)
+for number in range(0, nr_letters + 1):
+    n = random.randint(0, len(letters))
     password += letters[n]
 
-for number in range(0, nr_symbols):
-    n = random.randint(0, len(symbols)-1)
+for number in range(0, nr_symbols + 1):
+    n = random.randint(0, len(symbols))
     password += symbols[n]
 
-for number in range(0, nr_numbers):
-    n = random.randint(0, len(numbers)-1)
+for number in range(0, nr_numbers + 1):
+    n = random.randint(0, len(numbers))
     password += numbers[n]
 
 password = ''.join(random.sample(password,len(password)))
