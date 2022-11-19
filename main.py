@@ -17,18 +17,26 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 password = ""
 
-for number in range(0, nr_letters + 1):
-    n = random.randint(0, len(letters))
+for number in range(0, nr_letters):
+    # random choice method could have been used too...
+    # password += random.choice(letters)
+    n = random.randint(0, len(letters) - 1)
     password += letters[n]
 
-for number in range(0, nr_symbols + 1):
-    n = random.randint(0, len(symbols))
+for number in range(0, nr_symbols):
+    n = random.randint(0, len(symbols) - 1)
     password += symbols[n]
 
-for number in range(0, nr_numbers + 1):
-    n = random.randint(0, len(numbers))
+for number in range(0, nr_numbers):
+    n = random.randint(0, len(numbers) - 1)
     password += numbers[n]
 
+'''
+randomize the password string
+- sample method: string password, based on the length of the string
+- the random shuffle method is available if I were to use a list to
+- establish the password
+'''
 password = ''.join(random.sample(password,len(password)))
 
 print(password)
