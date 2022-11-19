@@ -33,10 +33,10 @@ for number in range(0, nr_numbers):
 
 '''
 randomize the password string
-- sample method: string password, based on the length of the string
-- the random shuffle method is available if I were to use a list to
+- sample function: string password, based on the length of the string
+- the random shuffle function is available if I were to use a list to
 - establish the password
 '''
 password = ''.join(random.sample(password,len(password)))
 
-print(password)
+print(f"Your password is: {password}")
